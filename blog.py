@@ -92,29 +92,29 @@ class Application(tornado.web.Application):
                                   stdin=open('schema.sql'))
 
 
+cookie_key_user = "lottery_client"
+
 class BaseHandler(tornado.web.RequestHandler):
     @property
     def db(self):
         return self.application.db
 
     def get_current_user(self):
-        user_id = self.get_secure_cookie("blogdemo_user")
+        user_id = self.get_secure_cookie(cookie_key_user)
         if not user_id: return None
-        return self.db.get("SELECT * FROM authors WHERE id = %s", int(user_id))
+        return self.db.get("SELECT * FROM user WHERE id = %s", int(user_id))
 
     def any_author_exists(self):
-        return bool(self.db.get("SELECT * FROM authors LIMIT 1"))
+        return bool(self.db.get("SELECT * FROM user LIMIT 1"))
 
 
 class HomeHandler(BaseHandler):
     def get(self):
-        entries = self.db.query("SELECT * FROM entries ORDER BY published "
-                                "DESC LIMIT 5")
-        if not entries:
-            self.redirect("/compose")
-            return
         self.render("Main.html", entries=entries)
 
+class SSCHandler(BaseHandler):
+    def get(self):
+        self.render("SSC.html", entries=entries)
 
 class EntryHandler(BaseHandler):
     def get(self, slug):
@@ -179,7 +179,7 @@ class ComposeHandler(BaseHandler):
 
 class AuthRegisterHandler(BaseHandler):
     def get(self):
-        self.render("create_author.html")
+        self.render("Register.html")
 
     @gen.coroutine
     def post(self):
@@ -193,7 +193,7 @@ class AuthRegisterHandler(BaseHandler):
             "VALUES (%s, %s, %s)",
             self.get_argument("email"), self.get_argument("name"),
             hashed_password)
-        self.set_secure_cookie("blogdemo_user", str(author_id))
+        self.set_secure_cookie(cookie_key_user, str(author_id))
         self.redirect(self.get_argument("next", "/"))
 
 class AuthLoginHandler(BaseHandler):
@@ -215,7 +215,7 @@ class AuthLoginHandler(BaseHandler):
             bcrypt.hashpw, tornado.escape.utf8(self.get_argument("password")),
             tornado.escape.utf8(author.hashed_password))
         if hashed_password == author.hashed_password:
-            self.set_secure_cookie("blogdemo_user", str(author.id))
+            self.set_secure_cookie(cookie_key_user, str(author.id))
             self.redirect(self.get_argument("next", "/"))
         else:
             self.render("login.html", error="incorrect password")
@@ -223,7 +223,7 @@ class AuthLoginHandler(BaseHandler):
 
 class AuthLogoutHandler(BaseHandler):
     def get(self):
-        self.clear_cookie("blogdemo_user")
+        self.clear_cookie(cookie_key_user)
         self.redirect(self.get_argument("next", "/"))
 
 
