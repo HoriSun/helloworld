@@ -43,3 +43,11 @@ CREATE TABLE authors (
     name VARCHAR(100) NOT NULL,
     hashed_password VARCHAR(100) NOT NULL
 );
+
+DROP TABLE IF EXISTS user;
+CREATE TABLE user (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,     
+    name VARCHAR(100) NOT NULL UNIQUE,
+    hashed_password VARCHAR(100) NOT NULL
+);
+--email VARCHAR(100) NOT NULL UNIQUE,
