@@ -40,7 +40,7 @@ table td,table th {
 #main {
 	top: 135px;
 	bottom: 27px;
-	background: #b44249 url("../../images/main/side_bg.jpg") no-repeat left bottom;
+	background: #b44249 url("../../Images/main/side_bg.jpg") no-repeat left bottom;
 	min-width: 1225px;
 }
 
@@ -50,7 +50,7 @@ table td,table th {
 }
 
 .frame {
-	background: url("../../images/main/main_con_bg.png") repeat 0 0 #000;
+	background: url("../../Images/main/main_con_bg.png") repeat 0 0 #000;
 	left: 190px;
 	width: auto;
 }
@@ -59,7 +59,7 @@ table td,table th {
 	bottom: auto;
 	height: 135px;
 	min-width: 1225px;
-	background: url("../../images/main/nav_bg.png") repeat-x 0 0;
+	background: url("../../Images/main/nav_bg.png") repeat-x 0 0;
 }
 
 a,a:hover {
@@ -105,7 +105,7 @@ a,a:hover {
 }
 
 .header .menu1 {
-	background: url("../../images/main/top_bg.png") no-repeat 0 0;
+	background: url("../../Images/main/top_bg.png") no-repeat 0 0;
 	float: left;
 	height: 52px;
 	margin-left: 200px;
@@ -122,20 +122,20 @@ a,a:hover {
     float: left;
     margin: 23px 8px 0;
     line-height: 22px;
-    background-image: url("../../images/main/logout.png");
+    background-image: url("../../Images/main/logout.png");
 	width: 70px;
 	height: 25px;
 }
 
 .header .menu3 a:hover{
-    background-image: url("../../images/main/logout_rollover.png");
+    background-image: url("../../Images/main/logout_rollover.png");
 }
 
 .header .menu4 a {
     float: left;
     margin: 23px 8px 0;
     line-height: 22px;
-    background-image: url("../../images/main/support.png");
+    background-image: url("../../Images/main/support.png");
     width: 70px;
     height: 25px;
 }
@@ -218,7 +218,7 @@ a,a:hover {
 	display: block;
 	width: 117px;
 	height: 46px;
-	background: url("../../images/main/nav_shuxian.png") no-repeat right 22px;
+	background: url("../../Images/main/nav_shuxian.png") no-repeat right 22px;
 }
 
 .more_game {
@@ -226,12 +226,12 @@ a,a:hover {
 }
 
 .header .lotterys .selected {
-	background: url("../../images/main/nav_hover.png") no-repeat 4px 0;
+	background: url("../../Images/main/nav_hover.png") no-repeat 4px 0;
 	color: #FFFF00;
 }
 
 .header .lotterys .setting {
-	background: url("../../images/main/setting.png") no-repeat 10px 18px;
+	background: url("../../Images/main/setting.png") no-repeat 10px 18px;
 	padding-left: 35px;
 	cursor: pointer;
 	color: rgb(252, 247, 247);
@@ -240,7 +240,7 @@ a,a:hover {
 }
 
 .header .lotterys .home {
-    background: url("../../images/main/home.png") no-repeat 10px 18px;
+    background: url("../../Images/main/home.png") no-repeat 10px 18px;
     padding-left: 35px;
     cursor: pointer;
     color: rgb(252, 247, 247);
@@ -340,7 +340,7 @@ a,a:hover {
 }
 
 .side_left .title {
-	background: url("../../images/main/left_bg.png") no-repeat 0 0;
+	background: url("../../Images/main/left_bg.png") no-repeat 0 0;
 	color: #fff;
 	font-weight: bold;
 	height: 33px;
@@ -410,7 +410,7 @@ a,a:hover {
 }
 
 .side_left .control a {
-	background: url("../../images/main/btn-bg.png") repeat-x;
+	background: url("../../Images/main/btn-bg.png") repeat-x;
 	width: 66px;
 	height: 18px;
 	line-height: 18px;
@@ -533,7 +533,7 @@ a,a:hover {
 }
 
 #lastBets .title a {
-	background: url("../../images/main/btn.png") no-repeat 0 0;
+	background: url("../../Images/main/btn.png") no-repeat 0 0;
 	position: relative;
 	display: block;
 	width: 37px;
@@ -597,7 +597,7 @@ a,a:hover {
 #footer {
 	top: auto;
 	min-width: 1225px;
-	background: url("../../images/main/marquebg.png") repeat-x;
+	background: url("../../Images/main/marquebg.png") repeat-x;
   	border-bottom: 1px solid #E6B3BE;
   	border-top: 1px solid #E6B3BE;
   	line-height: 27px;
@@ -711,16 +711,16 @@ a,a:hover {
 	color: #762d08;
 	height: 24px;
 	line-height: 24px;
-	background: #E57388 url("../../images/main/table_headerbg.gif") repeat-x left top;
+	background: #E57388 url("../../Images/main/table_headerbg.gif") repeat-x left top;
 }
 
 .skin_blue .table thead th {
-	background: #c5e5f4 url("../../images/main/table_headerbg.gif") repeat-x left top;
+	background: #c5e5f4 url("../../Images/main/table_headerbg.gif") repeat-x left top;
 	color: #35406d;
 }
 
 .skin_gray .table thead th {
-	background: #c5e5f4 url("../../images/main/table_headerbg.png") repeat-x left top;
+	background: #c5e5f4 url("../../Images/main/table_headerbg.png") repeat-x left top;
 	color: #fff;
 }
 
@@ -817,7 +817,7 @@ a,a:hover {
 }
 
 .skin_red {
-	background: url("../../images/main/main_bg.jpg") no-repeat 0 0 #A12F37;
+	background: url("../../Images/main/main_bg.jpg") no-repeat 0 0 #A12F37;
 }
 
 .skin_red .ui-dialog {
@@ -825,11 +825,11 @@ a,a:hover {
 }
 
 .skin_red .ui-dialog-titlebar {
-	background: url("../../images/main/openwinbg.png") repeat-x top;
+	background: url("../../Images/main/openwinbg.png") repeat-x top;
 }
 
 .skin_red .ui-dialog-icon,.skin_red .ui-dialog-titlebar-close {
-	background-image: url("../../images/main/btn.png");
+	background-image: url("../../Images/main/btn.png");
 }
 
 .skin_red .ui-dialog-content {
@@ -842,7 +842,7 @@ a,a:hover {
 }
 
 .skin_red .ui-dialog-buttonset .ui-button {
-	background-image: url("../../images/main/btn-bg.png");
+	background-image: url("../../Images/main/btn-bg.png");
 }
 
 .skin_red #betResultPanel .bets,.skin_red #betResultPanel li,.skin_red .control,.skin_red table td,.skin_red table th,.skin_red #betsBox .bottom,.skin_red #bcount

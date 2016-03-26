@@ -9,7 +9,7 @@ body{
 	color:#313131;
 	margin:0;
 	padding:0;
-	background:#b44851 url("../../images/login/user_bgpic.png") repeat-x left top;
+	background:#b44851 url("../../Images/login/user_bgpic.png") repeat-x left top;
 }
 
 div,form,img,ul,ol,li,dl,dt,dd{
@@ -31,7 +31,7 @@ a{
 
 .user_win{
 	width:100%;
-	background:url("../../images/login/user_background.jpg") no-repeat center top;
+	background:url("../../Images/login/user_background.jpg") no-repeat center top;
 }
 
 .user_logo{ width:210px; height:45px; margin:20px auto;}
@@ -42,11 +42,11 @@ a{
 	font-weight:bold;
 	line-height:50px;
 	color:white;
-	background:url("../../images/login/user_win.png") no-repeat left top;
+	background:url("../../Images/login/user_win.png") no-repeat left top;
 	text-align:center;
 }
-.user_winmain{ width:100%; background:url("../../images/login/user_winshadow.png") repeat-y right top;}
-.win_info{ width:770px; background:white url("../../images/login/user_bgwin.png") repeat-x left top;}
+.user_winmain{ width:100%; background:url("../../Images/login/user_winshadow.png") repeat-y right top;}
+.win_info{ width:770px; background:white url("../../Images/login/user_bgwin.png") repeat-x left top;}
 .user_winmain ul{ padding:20px 40px;}
 .user_winmain li{ line-height:15px; margin:0 0 10px 0;}
 
@@ -59,7 +59,7 @@ a{
 	width:66px;
 	height:33px;
 	line-height:27px;
-	background:url("../../images/login/tab3.png") no-repeat left top;
+	background:url("../../Images/login/tab3.png") no-repeat left top;
 	font-size:14px;
 	color:white;
 	font-weight:bold;
@@ -72,5 +72,5 @@ a{
 	color:yellow;
 }
 
-.user_winfooter{ width:100%; height:20px; background:url("../../images/login/user_win.png") no-repeat left bottom;}
+.user_winfooter{ width:100%; height:20px; background:url("../../Images/login/user_win.png") no-repeat left bottom;}
 
