@@ -1,0 +1,118 @@
+﻿@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	background: white;
+	color: #333;
+	font: 14px/1.231 Verdana, Arial, Helvetica, sans-serif;
+}
+
+input {
+	border: none;
+	padding: 0;
+}
+
+.header {
+	height: 100px;
+	margin: 0 auto;
+	width: 950px;
+}
+
+.header a {
+	display: block;
+	width: 300px;
+	float: right;
+}
+
+.main {
+	background: #b63a42 url("../../Images/login/bg.jpg") no-repeat;
+	height: 475px;
+}
+
+.panel {
+	background: url("../../Images/login/2015.png") no-repeat left;
+	width: 950px;
+	height: 475px;
+	margin: 0 auto;
+}
+
+.login {
+	background: url("../../Images/login/login_win.png") no-repeat;
+	float: right;
+	width: 270px;
+	height: 250px;
+	padding-top: 60px;
+	margin-top: 72px;
+}
+
+.login .info {
+	background: url("../../Images/login/input_bg.png") no-repeat left top;
+	height: 50px;
+	width: 220px;
+	margin: 10px auto;
+}
+
+.login .info label {
+	background: url("../../Images/login/login_ico.png") no-repeat top;
+	display: block;
+	font-size: 0;
+	text-indent: -99999px;
+	height: 35px;
+	width: 38px;
+	margin: 6px 0px 0 10px;
+	float: left;
+}
+
+.login .password label {
+	background-position: center;
+}
+
+.login .code label {
+	background-position: bottom;
+}
+
+.login .info input {
+	float: left;
+	font-size: 16px;
+	margin: 12px 0 0 0;
+	width: 155px;
+	font-family: Microsoft YaHei;
+}
+
+.login .info .tip {
+	color: #999;
+}
+
+.login .code input {
+	width: 60px;
+}
+
+.login .code img {
+	cursor: pointer;
+	float: right;
+	margin: 9px 15px 0 0;
+}
+
+.login .control input {
+	background: url("../../Images/login/submit.png");
+	display: block;
+	height: 36px;
+	margin: 15px auto 0 auto;
+	width: 215px;
+	text-indent: -9999em;
+}
+
+.c_logo {
+    float: left;
+    padding-top: 58px;
+    margin-top: 279px;
+    margin-left: 170px;
+}
+
+.c_logo img {
+    display: block;
+    margin: 10px auto 0 auto;
+    width: 182px;
+    height: 48px;
+}
