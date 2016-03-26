@@ -50,13 +50,15 @@ class Application(tornado.web.Application):
         # routing
         handlers = [
             (r"/", HomeHandler),
-            (r"/archive", ArchiveHandler),
-            (r"/feed", FeedHandler),
-            (r"/entry/([^/]+)", EntryHandler),
-            (r"/compose", ComposeHandler),
-            (r"/auth/create", AuthCreateHandler),
+            (r"/sub/SSC", SSCHandler),
+            (r"/Agreement", AgreementHandler),
+            #(r"/archive", ArchiveHandler),
+            #(r"/feed", FeedHandler),
+            #(r"/entry/([^/]+)", EntryHandler),
+            #(r"/compose", ComposeHandler),
             (r"/auth/login", AuthLoginHandler),
             (r"/auth/logout", AuthLogoutHandler),
+            (r"/auth/register",AuthRegisterHandler),
         ]
         # basic settings
         settings = dict(
@@ -111,7 +113,7 @@ class HomeHandler(BaseHandler):
         if not entries:
             self.redirect("/compose")
             return
-        self.render("home.html", entries=entries)
+        self.render("Main.html", entries=entries)
 
 
 class EntryHandler(BaseHandler):
@@ -175,7 +177,7 @@ class ComposeHandler(BaseHandler):
         self.redirect("/entry/" + slug)
 
 
-class AuthCreateHandler(BaseHandler):
+class AuthRegisterHandler(BaseHandler):
     def get(self):
         self.render("create_author.html")
 
@@ -193,7 +195,6 @@ class AuthCreateHandler(BaseHandler):
             hashed_password)
         self.set_secure_cookie("blogdemo_user", str(author_id))
         self.redirect(self.get_argument("next", "/"))
-
 
 class AuthLoginHandler(BaseHandler):
     def get(self):
