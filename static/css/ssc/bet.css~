@@ -57,7 +57,7 @@ table th, table td {
 }
 
 .lottery_info {
-	background: #f9dcdf url("../../images/ssc/title_bg.png") no-repeat left top;
+	background: #f9dcdf url("../../Images/ssc/title_bg.png") no-repeat left top;
 	height: 30px;
 	line-height: 30px;
 	width: 755px;
@@ -314,7 +314,7 @@ table thead th, table .head th {
 	width: 48px;
 	border: #b0b0b0 1px solid;
 	padding: 0 2px;
-	background: url("../../images/ssc/text_input.gif") repeat-x left top;
+	background: url("../../Images/ssc/text_input.gif") repeat-x left top;
 }
 
 .bet_panel .amount .input_focus, .control .input_focus {
@@ -347,7 +347,7 @@ table thead th, table .head th {
 
 #changlong .table_side{
 	width:210px; 
-	background:url("../../images/ssc/right_bg4.png") repeat-x repeat-y left top; 
+	background:url("../../Images/ssc/right_bg4.png") repeat-x repeat-y left top; 
 	color:#690925;
 }
 #changlong tbody th {
@@ -390,7 +390,7 @@ table thead th, table .head th {
 }
 
 .control .left a {
-	background: url("../../images/ssc/tab1.png") no-repeat 0 -33px;
+	background: url("../../Images/ssc/tab1.png") no-repeat 0 -33px;
 	color: #FFFFFF;
 	display: inline-block;
 	height: 33px;
@@ -401,7 +401,7 @@ table thead th, table .head th {
 }
 
 .control .left .on {
-	background: url("../../images/ssc/tab1.png") no-repeat 0 0;
+	background: url("../../Images/ssc/tab1.png") no-repeat 0 0;
 	color: #FFFFFF;
 	font-weight: 700;
 }
@@ -415,7 +415,7 @@ table thead th, table .head th {
 	height: 18px;
 	padding: 0 2px;
 	width: 65px;
-	background: url("../../images/ssc/text_input.gif") repeat-x left top;
+	background: url("../../Images/ssc/text_input.gif") repeat-x left top;
 }
 
 .control .buttons {
@@ -423,7 +423,7 @@ table thead th, table .head th {
 }
 
 .control .button {
-	background: url("../../images/ssc/tab2.png") no-repeat 0 0;
+	background: url("../../Images/ssc/tab2.png") no-repeat 0 0;
 	border: medium none;
   	font-size: 14px;
   	color: #FFFFFF;
@@ -434,7 +434,7 @@ table thead th, table .head th {
 }
 
 .control .quickbutton {
-	background: url("../../images/ssc/tab4.png") no-repeat 0 0;
+	background: url("../../Images/ssc/tab4.png") no-repeat 0 0;
 	border: medium none;
 	color: #FFFFFF;
 	height: 41px;
@@ -443,7 +443,7 @@ table thead th, table .head th {
 }
 
 .skin_blue .control .quickbutton {
-	background: url("../../images/ssc/tab4.png") no-repeat 0 0;
+	background: url("../../Images/ssc/tab4.png") no-repeat 0 0;
 }
 
 .bet_panel .selected {
@@ -486,7 +486,7 @@ table thead th, table .head th {
 	color: #626262;
 	font-size: 12px;
 	overflow: hidden;
-	background: url("../../images/ssc/hong_bg.png") repeat-x 0 0;
+	background: url("../../Images/ssc/hong_bg.png") repeat-x 0 0;
 	text-decoration: none;
 	display: inline-block;
 	width: 100%;
@@ -495,7 +495,7 @@ table thead th, table .head th {
 
 #resultPanel .selected a {
 	background-position: 0 -59px;
-	background: url("../../images/ssc/huang_bg.png") 0 0;
+	background: url("../../Images/ssc/huang_bg.png") 0 0;
 	color: #fff;
 	font-weight: bold;
 }
@@ -549,7 +549,7 @@ table thead th, table .head th {
 	height: 30px;
 	border: #f07e8f solid 1px;
 	border-right: none;
-	background: url("../../images/ssc/hong_bg.png") repeat-x 0 0;
+	background: url("../../Images/ssc/hong_bg.png") repeat-x 0 0;
 }
 
 .box .tab li {
@@ -562,12 +562,12 @@ table thead th, table .head th {
 	color: #fff;
 	font-size: 12px;
 	overflow: hidden;
-	background: url("../../images/ssc/hong_bg.png") repeat-x 0 0;
+	background: url("../../Images/ssc/hong_bg.png") repeat-x 0 0;
 	width: 215px;
 }
 
 .box .tab li.on {
-	background: url("../../images/ssc/huang_bg.png") 0 0;
+	background: url("../../Images/ssc/huang_bg.png") 0 0;
 	color: #511b00;
 	font-weight: bold;
 }
@@ -640,7 +640,7 @@ a, a:hover {
 .tab_title02{
 	height:29px;
 	line-height:29px;
-	background:url("../../images/ssc/tab_bg10.png") repeat-x left -93px;
+	background:url("../../Images/ssc/tab_bg10.png") repeat-x left -93px;
 }
 .tab_title02 a{
 	font-weight:bold;
@@ -649,7 +649,7 @@ a, a:hover {
 	height:29px;
 	font-size:12px;
 	color:#7d7d7d;
-	background:url("../../images/ssc/tab_bg10.png") no-repeat left -29px;
+	background:url("../../Images/ssc/tab_bg10.png") no-repeat left -29px;
 	text-shadow:1px 1px 0 white;
 	margin:0 5px 0 0;
 	text-align:center;
@@ -659,5 +659,5 @@ a, a:hover {
 .tab_title02 a:hover,.tab_title02 .on{
 	color:#98292e;
 	font-weight:bold;
-	background:url("../../images/ssc/tab_bg10.png") no-repeat left top;
+	background:url("../../Images/ssc/tab_bg10.png") no-repeat left top;
 }

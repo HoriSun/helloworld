@@ -26,19 +26,19 @@ input {
 }
 
 .main {
-	background: #b63a42 url("../../images/login/bg.jpg") no-repeat;
+	background: #b63a42 url("../../Images/login/bg.jpg") no-repeat;
 	height: 475px;
 }
 
 .panel {
-	background: url("../../images/login/2015.png") no-repeat left;
+	background: url("../../Images/login/2015.png") no-repeat left;
 	width: 950px;
 	height: 475px;
 	margin: 0 auto;
 }
 
 .login {
-	background: url("../../images/login/login_win.png") no-repeat;
+	background: url("../../Images/login/login_win.png") no-repeat;
 	float: right;
 	width: 270px;
 	height: 250px;
@@ -47,14 +47,14 @@ input {
 }
 
 .login .info {
-	background: url("../../images/login/input_bg.png") no-repeat left top;
+	background: url("../../Images/login/input_bg.png") no-repeat left top;
 	height: 50px;
 	width: 220px;
 	margin: 10px auto;
 }
 
 .login .info label {
-	background: url("../../images/login/login_ico.png") no-repeat top;
+	background: url("../../Images/login/login_ico.png") no-repeat top;
 	display: block;
 	font-size: 0;
 	text-indent: -99999px;
@@ -95,7 +95,7 @@ input {
 }
 
 .login .control input {
-	background: url("../../images/login/submit.png");
+	background: url("../../Images/login/submit.png");
 	display: block;
 	height: 36px;
 	margin: 15px auto 0 auto;
