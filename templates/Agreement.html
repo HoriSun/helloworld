@@ -1,14 +1,9 @@
-﻿@{
-    Layout = null;
-}
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Welcome</title>
-<link rel="stylesheet" type="text/css" href="/Content/login/agreement.css" />
+<link rel="stylesheet" type="text/css" href="{{ static_url("css/login/agreement.css") }}" />
 <script type="text/javascript"></script>
 <body>
 <div class="user_win">
@@ -28,7 +23,7 @@
                         <li>● 07. 本公司拥有一切判决及注消任何涉嫌以非正常方式下注之权利，在进行更深入调查期间将停止发放与其有关之任何彩金。客户有责任确保自己的帐户及密码保密，如果客户怀疑自己的资料被盗用，应立即通知本公司，并须更改其个人详细资料。所有被盗用帐号之损失将由客户自行负责。</li>
                         <li>“98彩票网”管理层 敬啟</li>
                         <li>我了解以及同意下注列明的协定和规则。</li>
-                        <li class="user_winbu"><div><span><a class="yes" href="Main">同意</a><a class="no" href="Login">不同意</a></span></div></li>
+                        <li class="user_winbu"><div><span><a class="yes" href="/">同意</a><a class="no" href="/auth/logout">不同意</a></span></div></li>
                 	</ul>
             	</div>
             </li>

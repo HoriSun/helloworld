@@ -3,7 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Welcome</title>
-<link href="/Content/register/reg.css" rel="stylesheet" type="text/css" />
+<link href="{{ static_url("css/register/reg.css") }}" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{{ static_url("js/jquery.js") }}"></script>
 <script type="text/javascript">
     $(function () {
         $('.reg_te img').click(function () {
@@ -35,23 +36,31 @@
             return;
         }
         var code = $('#code').val();
-        if (code == '') {
-            alert('请输入验证码。');
-            return;
-        }
-        $.post('reg', {
-            username: username,
+        //if (code == '') {
+        //    alert('请输入验证码。');
+        //    return;
+       // }
+
+       function getCookie(name) {
+           var r = document.cookie.match("\\b" + name + "=([^;]*)\\b");
+           return r ? r[1] : undefined;
+       }
+
+        $.post('register', {
+            name: username,
             password: password,
-            code: code
+            code: code,
+            _xsrf: getCookie("_xsrf")
         }, function (r) {
             if (r.success === true) {
                 alert('注册成功');
                 // 自动登录
-                $.post('login', {
-                    account: username,
-                    password: password
+                $.post('/auth/login', {
+                    name: username,
+                    password: password,
+                    _xsrf: getCookie("_xsrf")
                 }, function (r, s, x) {
-                    location.href = 'member/agreement';
+                    location.href = '/Agreement';
                 });
             } else {
                 alert(r.message);
@@ -64,7 +73,7 @@
 <body style="background:white;">
 <div class="header">
 	<ul>
-    	<li><a href="/"><img src="/Images/register/cp_index_logo.png" alt="98彩票网" /></a></li>
+    	<li><a href="/"><img src="{{ static_url("images/register/cp_index_logo.png") }}" alt="98彩票网" /></a></li>
     </ul>
 </div>
 <div class="reg_nav"></div>
