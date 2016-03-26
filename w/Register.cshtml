@@ -1,0 +1,93 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome</title>
+<link href="/Content/register/reg.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+    $(function () {
+        $('.reg_te img').click(function () {
+            $(this).attr('src', 'code?_=' + (new Date()).getTime());
+        });
+    })
+    function doRegister() {
+        var username = $('#username').val();
+        if (username == '') {
+            alert('请输入账号名称');
+            return;
+        }
+        if (username.length < 6 || username.length > 15) {
+            alert('账号名称由6-15个数字字符组成。');
+            return;
+        }
+        var password = $('#password').val();
+        var p1 = $('#password1').val();
+        if (password == '') {
+            alert('请输入密码');
+            return;
+        }
+        if (password.length < 6) {
+            alert('密码不能小于6位字符。');
+            return;
+        }
+        if (password != p1) {
+            alert('输入的密码不一致，请重新输入。');
+            return;
+        }
+        var code = $('#code').val();
+        if (code == '') {
+            alert('请输入验证码。');
+            return;
+        }
+        $.post('reg', {
+            username: username,
+            password: password,
+            code: code
+        }, function (r) {
+            if (r.success === true) {
+                alert('注册成功');
+                // 自动登录
+                $.post('login', {
+                    account: username,
+                    password: password
+                }, function (r, s, x) {
+                    location.href = 'member/agreement';
+                });
+            } else {
+                alert(r.message);
+            }
+        });
+    }
+</script>
+</head>
+
+<body style="background:white;">
+<div class="header">
+	<ul>
+    	<li><a href="/"><img src="/Images/register/cp_index_logo.png" alt="98彩票网" /></a></li>
+    </ul>
+</div>
+<div class="reg_nav"></div>
+
+<div class="reg_info">
+	<ul class="reg_title">
+    	<li>请在以下填写您的注册信息</li>
+    </ul>
+    <ul class="reg_te">
+    	<li><span>用户账号：</span><input id="username" type="text" class="te01" />由6-15个数字字符组成</li>
+        <li><span>登录密码：</span><input id="password" type="password" class="te01" />6位数以上</li>
+        <li><span>确认密码：</span><input id="password1" type="password" class="te01" />密码二次确认</li>
+        <li><span>验  证 码：</span><input id="code" type="text" class="te02" /><img src="code?_=1458820895098" alt="none" title="看不清？点击更换一张验证图片" /></li>
+    </ul>
+    <ul class="reg_bu">
+    	<li class="bu_line"><a href="javascript:void(0);" class="bu_reg" onclick="doRegister();">确认注册</a></li>
+        <li><a href="login" class="bu_login">我要登录</a>如果您已有账号，可点击登录进入</li>
+    </ul>
+</div>
+
+
+
+<div class="footer"><ul>Copyright ? 2014-2015 All Rights Reserved.</ul></div>
+</body>
+</html>

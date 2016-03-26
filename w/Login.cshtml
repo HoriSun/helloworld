@@ -1,0 +1,75 @@
+﻿@model MVCWebSite.Models.LoginModel
+
+@{
+    ViewBag.Title = "登录";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Welcome</title>
+<link href="/Content/login/login.css" rel="stylesheet" type="text/css" />
+<link href="/Content/login/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	$(function() {
+		$('.login .info input[title!=""]').focus(function() {
+			var t = $(this);
+			if (t.hasClass('tip')) {
+				t.removeClass('tip').val('').attr('type', t.data('ot'));
+			}
+		}).blur(function() {
+			var t = $(this);
+			if (t.val() == '') {
+				t.addClass('tip').val(t.attr('title')).data('ot', t.attr('type')).attr('type', 'text');
+			}
+		}).each(function() {
+			var t = $(this);
+			if (!t.attr('value')) {
+				t.addClass('tip').val(t.attr('title')).data('ot', t.attr('type')).attr('type', 'text');
+			}
+		});
+	})
+	function guestLogin() {
+		$('.login input[name=account],.login input[name=password]').val('!guest!');
+		$('.login form').submit();
+	}
+</script>
+</head>
+<body>
+	<div class="header">
+		<a href="/"><img src="/Images/login/cp_index_logo.png" alt="98彩票网" />
+		</a>
+	</div>
+	<div class="main">
+		<div class="panel">
+			<div class="login">
+			<a target="_blank" href="#" class="support"></a>
+				@using (Html.BeginForm()) {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true)
+					
+					<div class="info username">
+						@Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                @Html.ValidationMessageFor(m => m.UserName)
+					</div>
+					<div class="info password">
+						@Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                @Html.ValidationMessageFor(m => m.Password)
+					</div>
+					<div class="login_bu">
+						<input type="submit" class="enter" value="登录" /> <input type="button" class="reg" value="注册" onclick="location.href='Register'" /> <input
+							type="button" class="test" onclick="guestLogin();" />
+					</div>
+				}
+			</div>
+			<div class="c_logo">
+				<img src="/Images/login/SG-win.png" alt="support"/>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

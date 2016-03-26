@@ -1,0 +1,76 @@
+﻿@CHARSET "UTF-8";
+
+html { height:100%;}
+
+body{
+	height:100%;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#313131;
+	margin:0;
+	padding:0;
+	background:#b44851 url("../../Images/login/user_bgpic.png") repeat-x left top;
+}
+
+div,form,img,ul,ol,li,dl,dt,dd{
+	margin:0;
+	padding:0;
+	border:0;
+	list-style:none;
+	overflow:hidden;
+}
+
+a{
+	text-decoration:none;
+}
+
+.agree_win{
+	width:778px;
+	margin:20px auto;
+}
+
+.user_win{
+	width:100%;
+	background:url("../../Images/login/user_background.jpg") no-repeat center top;
+}
+
+.user_logo{ width:210px; height:45px; margin:20px auto;}
+.user_wintitle{
+	width:100%;
+	height:51px;
+	font-size:20px;
+	font-weight:bold;
+	line-height:50px;
+	color:white;
+	background:url("../../Images/login/user_win.png") no-repeat left top;
+	text-align:center;
+}
+.user_winmain{ width:100%; background:url("../../Images/login/user_winshadow.png") repeat-y right top;}
+.win_info{ width:770px; background:white url("../../Images/login/user_bgwin.png") repeat-x left top;}
+.user_winmain ul{ padding:20px 40px;}
+.user_winmain li{ line-height:15px; margin:0 0 10px 0;}
+
+.ftcolor_red{ color:red;}
+
+.user_winbu div{ border-top:1px solid #d3d1d1; padding:20px 0; margin:30px 0 0 0;}
+.user_winbu span{ display:block; width:250px; margin:0 auto;}
+.user_winbu a{
+	display:block;
+	width:66px;
+	height:33px;
+	line-height:27px;
+	background:url("../../Images/login/tab3.png") no-repeat left top;
+	font-size:14px;
+	color:white;
+	font-weight:bold;
+	text-align:center;
+	margin:0 0 0 30px;
+	float:left;
+}
+.user_winbu a:hover{
+	background-position:left -33px;
+	color:yellow;
+}
+
+.user_winfooter{ width:100%; height:20px; background:url("../../Images/login/user_win.png") no-repeat left bottom;}
+
